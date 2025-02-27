@@ -1,0 +1,54 @@
+# Extensions
+require:
+  - rubocop-rails
+  - rubocop-performance
+  - rubocop-factory_bot
+  - rubocop-rspec
+  - rubocop-rspec_rails
+AllCops:
+  TargetRubyVersion: 3.3
+  NewCops: enable
+  Exclude:
+    - 'bin/*'
+    - 'config/environments/*'
+    - 'config/*/**'
+    - 'coverage/**/*'
+    - 'db/**/*'
+    - 'log/*'
+    - 'node_modules/**/*'
+    - 'public/**/*'
+    - 'storage/**/*'
+    - 'swagger/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+Style/Documentation:
+  Enabled: false
+Style/RedundantFetchBlock:
+  Enabled: false
+Style/RedundantInterpolation:
+  Enabled: false
+Metrics/BlockLength:
+  Exclude:
+    - 'config/routes.rb'
+    - 'app/admin/*'
+    - 'config/initializers/doorkeeper.rb'
+    - 'app/models/concerns/**/*'
+    - 'lib/tasks/seeds/test_data.rake'
+RSpec/EmptyExampleGroup:
+  Exclude:
+    - 'spec/requests/swagger/**/*'
+Rails/I18nLocaleTexts:
+  Exclude:
+    - 'app/admin/*'
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+    - staging
+RSpec/MultipleMemoizedHelpers:
+  Exclude:
+    - 'spec/requests/swagger/**/*'
+RSpec/VariableName:
+  Exclude:
+    - 'spec/requests/swagger/**/*'

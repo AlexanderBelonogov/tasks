@@ -1,0 +1,5 @@
+:scheduler:
+  :schedule:
+    add_reccuring_task:
+      cron: '*/2 * * * *'
+      class: System::AddRecurringTasksJob
